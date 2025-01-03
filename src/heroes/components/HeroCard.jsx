@@ -1,0 +1,34 @@
+import React from 'react'
+
+export const HeroCard = ({
+   id,
+   superhero,
+   publisher,
+   alter_ego,
+   first_appearance,
+   characters,
+}) => {
+
+   const heroImageUrl = `./assets/${ id }.jpg`;
+
+   return (
+      <div>
+         <div className="col">
+            <div className="card">
+               <div className="row no-gotters">
+                  <div className="col-4">
+                     <img src={heroImageUrl} className='card-img' alt={superhero}/>
+                  </div>
+                  <div className="col-8">
+                     <div className="card-body">
+                        <h5 className="card-title">{superhero}</h5>
+                        <p className="card-text">{alter_ego}</p>
+                        <p className="card-text">{characters}</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   )
+}
